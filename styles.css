@@ -62,7 +62,7 @@ a {
   width: 100%;
   max-width: var(--max-page-width);
   margin: 0 auto;
-  padding: 144px var(--padding-x) 16px;
+  padding: 50px var(--padding-x) 16px;
   display: flex;
   align-items: flex-end;
 }
@@ -160,15 +160,16 @@ a {
 
 .hero-media {
   width: 100%;
-  height: 675px;
   overflow: hidden;
-  background-color: #7f7f7f;
+  background-color: var(--color-bg-light);
 }
 
 .hero-media video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 720px;
+  object-fit: contain;
+  display: block;
 }
 
 .hero-description {
@@ -343,10 +344,6 @@ a {
     max-width: 100%;
   }
 
-  .hero-media {
-    height: 480px;
-  }
-
   .hero-description {
     padding: 16px 80px 48px;
   }
@@ -407,15 +404,8 @@ a {
     margin-top: 32px;
   }
 
-  .hero-media {
-    height: auto;
-    min-height: 220px;
-    max-height: 60vw;
-  }
-
   .hero-media video {
-    object-fit: contain;
-    background-color: #000;
+    max-height: 60vw;
   }
 
   .hero-description {
