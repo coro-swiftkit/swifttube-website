@@ -1,0 +1,456 @@
+/* =============================================
+   SwiftTube Website — Shared Stylesheet
+   Desktop-first, then mobile responsive
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;700&family=Bricolage+Grotesque:opsz,wght@10..100,600&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* =============================================
+   RESET & BASE
+   ============================================= */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #f8f8f8;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, video {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* =============================================
+   CSS VARIABLES
+   ============================================= */
+
+:root {
+  --color-brand:      #3d2e2d;
+  --color-text:       #000;
+  --color-bg-light:   #f8f8f8;
+  --color-bg-white:   #fff;
+  --color-btn:        #1c1c1e;
+  --color-btn-text:   #fff;
+
+  --max-page-width:    1280px;
+  --max-content-width: 720px;
+  --padding-x:         96px;
+}
+
+/* =============================================
+   HEADER
+   ============================================= */
+
+.site-header {
+  width: 100%;
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+  padding: 144px var(--padding-x) 16px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 72px;
+  height: 78px;
+  flex-shrink: 0;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  letter-spacing: -0.64px;
+  color: var(--color-brand);
+  white-space: nowrap;
+}
+
+.tagline {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.3;
+  color: #000;
+  max-width: 720px;
+}
+
+/* =============================================
+   CTA ROW
+   ============================================= */
+
+.cta-row {
+  display: flex;
+  justify-content: center;
+  padding: 48px var(--padding-x) 0;
+  max-width: var(--max-page-width);
+  margin: 0 auto;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-btn);
+  color: var(--color-btn-text);
+  font-family: system-ui, -apple-system, 'SF Pro Display', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 26px;
+  text-decoration: none;
+  padding: 24px 96px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+/* =============================================
+   HERO SECTION
+   ============================================= */
+
+.hero-section {
+  background-color: var(--color-bg-light);
+  width: 100%;
+  margin-top: 48px;
+}
+
+.hero-media {
+  width: 100%;
+  height: 675px;
+  overflow: hidden;
+  background-color: #7f7f7f;
+}
+
+.hero-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-description {
+  padding: 16px 200px 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-description-content {
+  width: 100%;
+  max-width: var(--max-content-width);
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #000;
+}
+
+.hero-description-content p {
+  margin-bottom: 0.4em;
+}
+
+.hero-description-content ul {
+  list-style: disc;
+  padding-left: 27px;
+}
+
+.hero-description-content li {
+  line-height: 1.5;
+}
+
+/* =============================================
+   PRIVACY SECTION
+   ============================================= */
+
+.privacy-section {
+  background-color: var(--color-bg-white);
+  padding: 40px var(--padding-x);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.privacy-content {
+  width: 100%;
+  max-width: var(--max-content-width);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.privacy-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.32px;
+  color: #000;
+  font-optical-sizing: auto;
+}
+
+.privacy-divider {
+  border: none;
+  border-top: 1px solid #000;
+  width: 100%;
+  margin: 0;
+}
+
+.privacy-date {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.privacy-body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.privacy-body p {
+  margin-bottom: 0.6em;
+  white-space: pre-wrap;
+}
+
+.privacy-body .section-heading {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.privacy-body ul,
+.privacy-body ol {
+  padding-left: 27px;
+  margin-bottom: 0.6em;
+}
+
+.privacy-body ul {
+  list-style: disc;
+}
+
+.privacy-body ol {
+  list-style: decimal;
+}
+
+.privacy-body li {
+  line-height: 1.3;
+  margin-bottom: 0.2em;
+}
+
+.privacy-body a {
+  color: #000;
+  text-decoration: underline;
+}
+
+/* =============================================
+   FOOTER
+   ============================================= */
+
+.site-footer {
+  background-color: var(--color-bg-light);
+  padding: 80px 20px;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+  max-width: 1800px;
+  margin: 0 auto;
+  font-family: 'Archivo Narrow', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.3;
+  color: #000;
+}
+
+.footer-left {
+  flex: 1;
+}
+
+.footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-right a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+
+/* =============================================
+   RESPONSIVE — TABLET (≤ 900px)
+   ============================================= */
+
+@media (max-width: 900px) {
+  :root {
+    --padding-x: 48px;
+  }
+
+  .logo-text {
+    font-size: 48px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .hero-media {
+    height: 480px;
+  }
+
+  .hero-description {
+    padding: 16px 80px 48px;
+  }
+
+  .btn-primary {
+    font-size: 20px;
+    padding: 20px 64px;
+  }
+}
+
+/* =============================================
+   RESPONSIVE — MOBILE (≤ 640px)
+   ============================================= */
+
+@media (max-width: 640px) {
+  :root {
+    --padding-x: 24px;
+  }
+
+  .site-header {
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .logo-icon {
+    width: 48px;
+    height: 52px;
+  }
+
+  .logo-text {
+    font-size: 36px;
+    letter-spacing: -0.36px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .cta-row {
+    padding-top: 32px;
+  }
+
+  .btn-primary {
+    font-size: 18px;
+    padding: 16px 40px;
+    width: 100%;
+    border-radius: 999px;
+  }
+
+  .hero-section {
+    margin-top: 32px;
+  }
+
+  .hero-media {
+    height: auto;
+    min-height: 220px;
+    max-height: 60vw;
+  }
+
+  .hero-media video {
+    object-fit: contain;
+    background-color: #000;
+  }
+
+  .hero-description {
+    padding: 16px var(--padding-x) 40px;
+  }
+
+  .hero-description-content {
+    font-size: 16px;
+  }
+
+  .privacy-section {
+    padding: 40px var(--padding-x);
+  }
+
+  .privacy-title {
+    font-size: 24px;
+  }
+
+  .privacy-body {
+    font-size: 16px;
+  }
+
+  .site-footer {
+    padding: 40px 20px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-left,
+  .footer-right {
+    text-align: center;
+    flex: none;
+  }
+}
